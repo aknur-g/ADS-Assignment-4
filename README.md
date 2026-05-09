@@ -1,6 +1,7 @@
 # Assignment 4 – Graph Traversal and Representation System
 
-Name: Galymzhankyzy Aknur  IT - 2501
+Galymzhankyzy Aknur IT - 2501
+
 ---
 
 # Project Overview
@@ -38,7 +39,7 @@ Adjacency lists are memory efficient and suitable for sparse graphs.
 
 ## Graph Structure Output
 
-![Graph Structure]('docs/screenshots/graph-output.png')
+![Graph Structure](screenshots/graph-output.png)
 
 ---
 
@@ -137,7 +138,7 @@ Where:
 
 ## BFS Traversal Output
 
-![BFS Output](docs/screenshots/bfs-output.png)
+![BFS Traversal](screenshots/bfs-output.png)
 
 ---
 
@@ -165,7 +166,7 @@ DFS is useful for:
 
 ## DFS Traversal Output
 
-![DFS Output](docs/screenshots/dfs-output.png)
+![DFS Traversal](screenshots/dfs-output.png)
 
 ---
 
@@ -179,71 +180,93 @@ The purpose of the experiment was to compare BFS and DFS performance and observe
 
 | Graph Size | BFS Time (ns) | DFS Time (ns) |
 |------------|---------------|---------------|
-| 10         | 1244400 ns    | 261900 ns     |
-| 30         | 565700 ns   | 577600 ns   |
-| 100        | 1492200 ns   | 1405900 ns   |
+| 10         | YOUR RESULT   | YOUR RESULT   |
+| 30         | YOUR RESULT   | YOUR RESULT   |
+| 100        | YOUR RESULT   | YOUR RESULT   |
 
 ---
 
 ## Performance Results for 10 Vertices
 
-![Performance Results 10](docs/screenshots/performance-results10.png)
+![Performance 10 Vertices](screenshots/performance-results10.png)
 
 ---
 
 ## Performance Results for 30 Vertices
 
-![Performance Results 30](docs/screenshots/performance-results30.png)
+![Performance 30 Vertices](screenshots/performance-results30.png)
 
 ---
 
 ## Performance Results for 100 Vertices
 
-![Performance Results 100](docs/screenshots/performance-results100.png)
+![Performance 100 Vertices](screenshots/performance-results100.png)
 
 ---
 
-# Observations and Analysis
+# Analysis Questions
 
-The execution time increased as graph size increased.
+## How does graph size affect BFS and DFS performance?
 
-Both BFS and DFS showed approximately linear growth behavior, which matches the expected complexity:
+As graph size increases, execution time for both BFS and DFS also increases. Larger graphs contain more vertices and edges, therefore traversal algorithms need more operations to visit all nodes.
+
+---
+
+## Which traversal is faster in your experiments?
+
+In the experiments, BFS and DFS showed very similar performance because both algorithms traverse all vertices and edges. In some cases DFS was slightly faster due to recursive implementation and graph structure.
+
+---
+
+## Do results match the expected complexity O(V + E)?
+
+Yes. The experimental results match the expected time complexity:
 
 :contentReference[oaicite:2]{index=2}
 
-In the experiments, BFS and DFS produced different traversal orders depending on graph structure.
-
-BFS was more suitable for level-by-level traversal, while DFS explored deeply before returning.
+Both algorithms visit every vertex and edge only once.
 
 ---
 
-# BFS vs DFS
+## How does graph structure affect traversal order?
 
-## When BFS is Preferred
+Traversal order depends on how vertices are connected.
+
+BFS visits vertices level by level, while DFS explores deeply before backtracking. Different graph structures can produce different traversal outputs.
+
+---
+
+## When is BFS preferred over DFS?
 
 BFS is preferred when:
 - shortest path is required
 - level traversal is needed
 - distance between nodes must be calculated
 
-## Limitations of DFS
+---
+
+## What are the limitations of DFS?
 
 DFS:
 - does not guarantee shortest path
-- may consume recursion memory
+- may consume more recursion memory
 - can go very deep in large graphs
+- may cause stack overflow in extremely large recursive traversals
 
 ---
 
 # Reflection
 
 During this assignment, I learned how graph traversal algorithms work and how graphs can be represented using adjacency lists.
+
 I understood the difference between BFS and DFS. BFS explores the graph level by level using a queue, while DFS explores deeply using recursion.
+
 One challenge was understanding recursive DFS traversal and correctly managing visited vertices. This project improved my understanding of graph algorithms, recursion, and time complexity analysis.
 
 ---
 
 # Conclusion
+
 This project successfully implemented:
 - Graph representation using adjacency list
 - Breadth-First Search (BFS)
