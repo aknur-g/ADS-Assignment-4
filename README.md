@@ -180,9 +180,9 @@ The purpose of the experiment was to compare BFS and DFS performance and observe
 
 | Graph Size | BFS Time (ns) | DFS Time (ns) |
 |------------|---------------|---------------|
-| 10         | YOUR RESULT   | YOUR RESULT   |
-| 30         | YOUR RESULT   | YOUR RESULT   |
-| 100        | YOUR RESULT   | YOUR RESULT   |
+| 10         | 1244400 ns   | 261900 ns   |
+| 30         | 565700 ns   | 577600 ns   |
+| 100        | 1492200 ns   | 1405900 ns   |
 
 ---
 
