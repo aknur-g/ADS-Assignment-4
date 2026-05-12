@@ -31,16 +31,6 @@ The graph is represented using an adjacency list.
 
 Each vertex stores a list of its neighboring vertices.
 
-Example graph structure:
-
-        0
-      /   \
-     1     2
-    / \   / \
-   3   4 5   6
-
-This branching structure better demonstrates the behavioral differences between BFS and DFS traversals.
-
 Adjacency lists are memory efficient and suitable for sparse graphs.
 
 ## Graph Structure Output
