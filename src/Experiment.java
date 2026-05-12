@@ -2,6 +2,8 @@ public class Experiment {
 
     public void runTraversals(Graph g, int startVertex) {
 
+        System.out.println("\nRunning BFS...");
+
         long startBFS = System.nanoTime();
 
         g.bfs(startVertex);
@@ -11,6 +13,9 @@ public class Experiment {
         long bfsTime = endBFS - startBFS;
 
         System.out.println("BFS Execution Time: " + bfsTime + " ns");
+
+
+        System.out.println("\nRunning DFS...");
 
         long startDFS = System.nanoTime();
 
@@ -22,6 +27,7 @@ public class Experiment {
 
         System.out.println("DFS Execution Time: " + dfsTime + " ns");
     }
+
 
     public void runMultipleTests() {
 
@@ -40,9 +46,14 @@ public class Experiment {
                 graph.addVertex(new Vertex(i));
             }
 
-            for (int i = 0; i < size - 1; i++) {
+            // Branching graph structure
+            for (int i = 0; i < size; i++) {
 
-                graph.addEdge(i, i + 1);
+                if (2 * i + 1 < size)
+                    graph.addEdge(i, 2 * i + 1);
+
+                if (2 * i + 2 < size)
+                    graph.addEdge(i, 2 * i + 2);
             }
 
             if (size == 10) {
@@ -54,8 +65,10 @@ public class Experiment {
         }
     }
 
+
     public void printResults() {
 
         System.out.println("\nExperiment completed successfully.");
+        System.out.println("Graphs of sizes 10, 30, and 100 were tested.");
     }
 }
