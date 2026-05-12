@@ -1,6 +1,9 @@
 # Assignment 4 – Graph Traversal and Representation System
 
-Galymzhankyzy Aknur IT - 2501
+## Student Information
+
+Name: Galymzhankyzy Aknur IT-2501  
+Course: Algorithms and Data Structures
 
 ---
 
@@ -9,8 +12,8 @@ Galymzhankyzy Aknur IT - 2501
 This project demonstrates graph representation and graph traversal algorithms in Java.
 
 A graph consists of:
-- Vertices (nodes)
-- Edges (connections between vertices)
+- Vertices(nodes)
+- Edges(connections between vertices)
 
 The graph in this project is implemented using an adjacency list representation.
 
@@ -28,12 +31,15 @@ The graph is represented using an adjacency list.
 
 Each vertex stores a list of its neighboring vertices.
 
-Example:
+Example graph structure:
 
-0 -> 1  
-1 -> 2  
-2 -> 3  
-3 -> 4
+        0
+      /   \
+     1     2
+    / \   / \
+   3   4 5   6
+
+This branching structure better demonstrates the behavioral differences between BFS and DFS traversals.
 
 Adjacency lists are memory efficient and suitable for sparse graphs.
 
@@ -108,6 +114,8 @@ Graphs with:
 
 were tested.
 
+The graph structure was designed with branching connections to better visualize traversal behavior.
+
 ---
 
 # Breadth-First Search (BFS)
@@ -130,13 +138,21 @@ BFS is useful for:
 
 ## BFS Time Complexity
 
-:contentReference[oaicite:0]{index=0}
+O(V + E)
 
 Where:
 - `V` = number of vertices
 - `E` = number of edges
 
 ## BFS Traversal Output
+
+Example BFS traversal:
+
+```text id="q5m8xt"
+0 1 2 3 4 5 6
+```
+
+BFS visits vertices level by level before going deeper into the graph.
 
 ![BFS Traversal](screenshots/bfs-output.png)
 
@@ -162,9 +178,17 @@ DFS is useful for:
 
 ## DFS Time Complexity
 
-:contentReference[oaicite:1]{index=1}
+O(V + E)
 
 ## DFS Traversal Output
+
+Example DFS traversal:
+
+```text id="p2v7wr"
+0 1 3 4 2 5 6
+```
+
+DFS explores deeply into one branch before returning and visiting other branches.
 
 ![DFS Traversal](screenshots/dfs-output.png)
 
@@ -180,9 +204,9 @@ The purpose of the experiment was to compare BFS and DFS performance and observe
 
 | Graph Size | BFS Time (ns) | DFS Time (ns) |
 |------------|---------------|---------------|
-| 10         | 1244400 ns   | 261900 ns   |
-| 30         | 565700 ns   | 577600 ns   |
-| 100        | 1492200 ns   | 1405900 ns   |
+| 10         | 969900   | 282600   |
+| 30         | 543700   | 526100   |
+| 100        | 1457900   | 1257400   |
 
 ---
 
@@ -230,9 +254,11 @@ Both algorithms visit every vertex and edge only once.
 
 ## How does graph structure affect traversal order?
 
-Traversal order depends on how vertices are connected.
+Traversal order depends on graph structure and traversal strategy.
 
-BFS visits vertices level by level, while DFS explores deeply before backtracking. Different graph structures can produce different traversal outputs.
+The branching graph structure made traversal differences between BFS and DFS more visible and easier to analyze.
+
+BFS visits vertices level by level, while DFS explores deeply before backtracking.
 
 ---
 
