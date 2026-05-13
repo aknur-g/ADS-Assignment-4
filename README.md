@@ -235,8 +235,7 @@ In the experiments, BFS and DFS showed very similar performance because both alg
 ## Do results match the expected complexity O(V + E)?
 
 Yes. The experimental results match the expected time complexity:
-
-:contentReference[oaicite:2]{index=2}
+'O(V + E)'
 
 Both algorithms visit every vertex and edge only once.
 
